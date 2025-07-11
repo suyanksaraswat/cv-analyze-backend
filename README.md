@@ -1,18 +1,21 @@
 ## 📁 Project Structure
 
+```
 cv-analyze-backend/
 ├── src/
-│ ├── controllers/ # Handles API logic (e.g., parsing, scoring)
-│ ├── services/ # Business logic (e.g., resume analysis, NLP)
-│ ├── routes/ # Defines Express routes
-│ ├── utils/ # Utility modules (e.g., file handling, parsing)
-│ └── index.js # Main entry point, sets up Express app
+│   ├── controllers/       # Handles API logic (e.g., parsing, scoring)
+│   ├── services/          # Business logic (e.g., resume analysis, NLP)
+│   ├── routes/            # Defines Express routes
+│   ├── utils/             # Utility modules (e.g., file handling, parsing)
+│   └── index.js           # Main entry point, sets up Express app
 ├── config/
-│ └── default.js # Configuration values (API keys, constants)
-├── tests/ # Unit and integration tests
-├── .env.example # Example environment config
-├── package.json # Project metadata and dependencies
-└── README.md # Project documentation
+│   └── default.js         # Configuration values (API keys, constants)
+├── tests/                 # Unit and integration tests
+├── .env.example           # Example environment config
+├── package.json           # Project metadata and dependencies
+└── README.md              # Project documentation
+```
+
 
 ---
 
