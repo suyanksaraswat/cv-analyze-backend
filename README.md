@@ -37,7 +37,7 @@ cv-analyze-backend/
 
 ```bash
 # Install dependencies
-npm install
+yarn
 
 # Run the development server
 npm run dev
