@@ -11,7 +11,7 @@ export function extractTextFromPDF(base64PDF: string): Promise<string> {
 
       logger.info('Starting PDF text extraction', { bufferSize: buffer.length });
 
-      reader.parseBuffer(buffer, (err, item) => {
+      reader.parseBuffer(buffer, (err: any, item) => {
         if (err) {
           logger.error('PDF parsing error', { error: err.message });
           return reject(new Error(`PDF parsing failed: ${err.message}`));
@@ -19,8 +19,8 @@ export function extractTextFromPDF(base64PDF: string): Promise<string> {
 
         if (!item) {
           const extractedText = fullText.trim();
-          logger.info('PDF text extraction completed', { 
-            textLength: extractedText.length 
+          logger.info('PDF text extraction completed', {
+            textLength: extractedText.length,
           });
           return resolve(extractedText);
         }
@@ -30,8 +30,8 @@ export function extractTextFromPDF(base64PDF: string): Promise<string> {
         }
       });
     } catch (error) {
-      logger.error('PDF extraction error', { 
-        error: error instanceof Error ? error.message : 'Unknown error' 
+      logger.error('PDF extraction error', {
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
       reject(new Error('Failed to process PDF'));
     }
